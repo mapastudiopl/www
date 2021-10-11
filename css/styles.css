@@ -1,0 +1,108 @@
+:root {
+	/* colors */
+	--global--color-red: rgba(204,0,0,1);
+	--global--color-orange: rgba(255,219,34,1);
+	--global--color-black: rgba(46,46,46, 1);
+	--global--color-black-30:rgba(46,46,46, 0.3);
+	--global--color-black-70: rgba(46,46,46,0.7);
+	--global--color-grey:rgba(243, 243, 242, 1);
+	--global--color-white: rgba(255,255,255,1);
+	--global--color-white-50: rgba(255, 255, 255, 0.5);
+	--global--color-white-0: rgba(255, 255, 255, 0);
+	--global--color-figcaption: rgba(176, 176, 176, 1);
+	/* align */
+	--alignleft-margin:var(--global-spacing-horizontal);
+	--alignright-margin:var(--global-spacing-horizontal);
+	--global--aligncenter: calc(100vw * 0.5);
+	/*animation*/
+	--typeSpeed: 3s;
+	--typeCharacters: 23;
+	/*links*/ 
+	--links-normal-color: rgba(204,0,0,1);
+	--links-hover-color: rgba(176, 42, 55, 1);
+}
+header.main {height: 200vh;}
+.second_container {
+	/* hide fixed overflow contents */
+	clip: rect(0, auto, auto, 0);
+  
+	/* does not work if overflow = visible */
+	overflow: hidden;
+  
+	/* only works with absolute positioning */
+	position: absolute;
+  
+	/* Make sure containers are full-width and height */
+	height: 100vh;
+	left: 0;
+	width: 100%;
+	-webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	-o-mask-image:-webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	-moz-mask-image:-webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+	mask-image:-webkit-linear-gradient(top, #ffffff 0%,#ffffff 100%);
+  }
+  
+  .container_solid {
+	background: var(--global--color-white);
+	top: 0;
+  }
+  .title_wrapper {
+	position: fixed;
+	display: block;  
+	margin: auto;
+	width: 100%;
+	/* center the text wrapper vertically */
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+  }
+  
+  .title_wrapper h1 {
+	text-align: center;
+	font-size: 64px;
+	text-transform: uppercase;
+	font-weight: 900;
+  }
+  
+  .container_solid .title_wrapper h1 {
+	background-size: cover;
+	background-position: center;
+	
+	/* clip the text is possible */
+	/*text-fill-color: var(--global--color-black-30);*/
+	-webkit-text-fill-color: var(--global--color-black-30);
+	background-clip: text;
+	-webkit-background-clip: text;
+	
+	/* fallback text color */
+	color: var(--global--color-black);
+  }
+  .container_image {
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	top: 100vh;
+  }
+  .container_image .title_wrapper h1 {
+	color: var(--global--color-white);
+  }
+  main p:first-of-type {
+    font-size: 1.35em;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+} 
+.service-image {overflow:hidden; }
+.service-image img {transition: transform .5s ease; position: relative;}
+.service-image:hover img {transform: scale(1.05);}
+.service-image .caption {position: absolute; z-index: 990; bottom: 0; left: 0; right: 0; top: 0; background-color: var(--global--color-black-70); text-align: center; opacity: 0; transition: .4s all ease; color: #eaeaea;}
+.service-image .caption {padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.service-image:hover .caption {opacity: 1;}
+.service-image .caption-title{line-height: 1.25; font-size: 24px; position: relative; letter-spacing: 0.12em}
+.service-image .caption-text {max-width: 340px; font-size: 16px; letter-spacing: 0.1em;}
+.divider {line-height: 0; border: 0; /*display: inline-block;*/ height: 1px; /*width: 100px; max-width: 100px;*/}
+.divider {margin-bottom: 20px;}
+.divider-gradient {background: linear-gradient(-45deg, var(--global--color-orange), var(--global--color-red));}
+h1 + .divider, h2 + .divider, h3 + .divider, h4 + .divider {margin-top: 20px;}
+.divider + .row {margin-top: 20px;}
